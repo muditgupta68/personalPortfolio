@@ -1,0 +1,1 @@
+$('circle').removeClass('stroke');

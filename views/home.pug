@@ -1,0 +1,208 @@
+//- mixins functions for pug template
+mixin slide(num,max,src,text,link)
+    .mySlides.fade
+        .numberText= num+"/"+max
+        a(href=link, target="_blank", rel="noopener noreferrer") #[img(src=src, alt="project image")]
+        .text= text
+
+mixin expertise(text)
+    .cardExpert
+        h3= text
+
+doctype html
+html
+    head 
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+        link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css")
+        style
+            include ../static/style.css
+    body
+        nav#start 
+            div.container 
+                ul 
+                    li.lst #[a.navAnchor(href="/") Home ]
+                    li.lst #[a.navAnchor(href="/") About ]
+                    li.lst #[a.navAnchor(href="/") Portfolio ]
+                    li.lst #[a.navAnchor(href="/") Contact ]
+            div.cover.container
+                div.bar
+                    div.divisions 
+                        i.fal.fa-map-marker-alt
+                        div.rightInfo
+                            h5 D-Block Vikas-Puri New Delhi 110018 
+                    div.divisions
+                        i.fal.fa-phone
+                        div.rightInfo
+                            h5 +91-965238322  
+
+                    div.divisions 
+                        i.far.fa-comments-alt 
+                        div.rightInfo
+                            h5 muditgupta1086@gmail.com
+                            h5 REPLY IN 24 HOURS
+                button.resumeDownload Download Resume 
+
+            div.coverIntro
+                div.profile 
+                    img.profilePic(src="../static/profile.PNG", alt="profile image: Mudit")
+                div.introData
+                    h2 Mudit Gupta
+                    h3.design Software/Web Developer
+                    div.data
+                        h4 Born : #[span.entry October 06, 2000]
+                        h4 EMAIL : #[span.entry muditgupta1086@gmail.com]
+                    div.flex.containIcons
+                        div.icons 
+                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
+                        div.icons 
+                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
+                        div.icons 
+                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
+                        div.icons 
+                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook] 
+        //- section.fill
+        section.about.flex(data-aos="fade-right")
+            div.col1
+                div.heading
+                    h1 #[b About me]
+                    h6.lightMini professional path 
+            dov.col2
+                div.content
+                    p Hi! My name is Mudit Gupta, seeking interest in line of web development and software development focusing on crafting different useful softwares, web designing and coding since I started working with computers. I tried to explore to all the field of computer science and found python development and web development as my upper hand. 
+                    br 
+                    br 
+                    //- p Now as a developer I wish to try for real world hand on projects and help our organizations to fulfill their requirements. I really can assure you to trust on me because I work on project as it is mine.  
+                    div.graph
+                        div.skill
+                            svg(version="1.1")
+                                linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="100%")
+                                    stop (offset="0%"   stop-color="red")
+                                    stop (offset="100%" stop-color="red")
+                                circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="6" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
+                            div.skillData
+                                h1 95% 
+                                h3 HTML5 & CSS3
+                        div.skill 
+                            svg(version="1.1")
+                                linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
+                                    stop (offset="0%"   stop-color="red")
+                                    stop (offset="100%" stop-color="red")
+                                circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="25" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
+                                
+                            div.skillData
+                                h1 85% 
+                                h3 Javascript
+                        div.skill 
+                            svg(version="1.1")
+                                linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
+                                    stop (offset="0%"   stop-color="red")
+                                    stop (offset="100%" stop-color="red")
+                                circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="40" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
+                                
+                            div.skillData
+                                h1 80% 
+                                h3 MangoDB
+                        div.skill 
+                            svg(version="1.1")
+                                linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
+                                    stop (offset="0%"   stop-color="red")
+                                    stop (offset="100%" stop-color="red")
+                                circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="0" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
+                                
+                            div.skillData
+                                h1 97% 
+                                h3 Python
+                        div.skill 
+                            svg(version="1.1")
+                                linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
+                                    stop (offset="0%"   stop-color="red")
+                                    stop (offset="100%" stop-color="red")
+                                circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="15" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
+                                
+                            div.skillData
+                                h1 90% 
+            
+                                h3 Pug Template
+        section.more-about(data-aos="fade-up")
+            div.education 
+                h2 education
+                div.single-education 
+                    h3 Amity University Noida 
+                    p B.tech Computer Science
+                    p CGPA: 08.45 
+                div.single-education 
+                    h3 Maxfort School Dwarka 
+                    p Matriculate (10th) & Senior Secondary (12th)  
+                    p Percentage: 83%
+
+        section.expertise 
+            div.services(data-aos="fade-up")
+                h1 my expertise   
+                div.aboutExpertise.flex1
+                    +expertise('SPA: Single page application')
+                    +expertise('Responsive Designing')
+                    +expertise('Front-End designing')
+
+ 
+            div.services(data-aos="fade-up")
+                h1 Projects  
+                div.container.slideshow-container
+                    +slide(1,6,'../static/projectImages/project1.png','project1','#')
+                    +slide(2,6,'../static/projectImages/project2.png','project2','#')
+                    +slide(3,6,'../static/projectImages/project3.png','project3','#')
+                    +slide(4,6,'../static/projectImages/project4.png','project4','#')
+                    +slide(5,6,'../static/projectImages/project5.png','project5','#')
+                    +slide(6,6,'../static/projectImages/project6.png','project6','#')
+
+                    a.prev(onclick="slideChange(-1)") &#10094
+                    a.next(onclick="slideChange(1)") &#10095
+
+        footer(data-aos="fade") 
+            div.footContainer
+                div.flex2#footHead
+                    h1 get in touch 
+                    button.resumeButton Download resume
+                div.formContainer 
+                    h2 Contact me
+                form(action="#", method="post")  
+                    div.form.flex3
+                        input.inputForm(type="text", name="name", placeholder="Your Name", required)  
+                        input.inputForm(type="text", name="email", placeholder="Email", required)   
+                        input.inputForm(type="text", name="subject", placeholder="Subject", required)
+                    textarea.message(name="message", cols="64", rows="5", placeholder="Message")
+                    button.submitButton(type="submit") Send Message 
+                div.flex2.foot-bottom 
+                    div.buttons.flex 
+                        div.foot-icons#icon-container 
+                            a.iconAnchor#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
+                        div.foot-icons#icon-container 
+                            a.iconAnchor#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
+                        div.foot-icons#icon-container 
+                            a.iconAnchor#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
+                        div.foot-icons#icon-container 
+                            a.iconAnchor#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook]
+                    div.copyright 
+                        h4 Copyright ©2021 All rights reserved | made with ❤ by Mudit Gupta
+        div.button-to-top 
+            div.button-link #[i.fad.fa-chevron-double-up] 
+        
+        script(src="https://unpkg.com/aos@next/dist/aos.js") 
+        script(src="../static/app.js") 
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
+        script(src="../static/scroll.js")
+        //- AOS sliders
+        script AOS.init({offset: 300,delay: 1,once: true , duration: 1000});
+            
+          
+            
+
+                        
+                    
+
+ 
+        
+        
+
+        
