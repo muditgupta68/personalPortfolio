@@ -1,6 +1,46 @@
 let slider = document.querySelector('.button-link');
+let formInput = document.querySelectorAll('.inputForm');
+let formMsg = document.querySelector('.message');
+let submit = document.querySelector('.submitButton');
 
+let check1=check2= 0;
 let slideNumber = 0;
+
+formInput.forEach(input=>{
+    input.addEventListener('input',(e)=>{
+        let value = e.target.value;
+        check1=1;
+        e.target.classList.remove('error')
+        console.log(value);
+        if(value==""){
+            e.target.classList.add('error')
+            check1=0;
+        }
+    });
+
+});
+
+formMsg.addEventListener('input',(e)=>{
+    let value = e.target.value;
+    check2=1;
+    e.target.classList.remove('error')
+    console.log(value);
+    if(value==""){
+        e.target.classList.add('error')
+        check2=0;
+    }
+});
+
+submit.addEventListener('click',(e)=>{
+    if(check1==0||check2==0){
+        formMsg.classList.add('error')
+        formInput.forEach(input=>{
+            input.classList.add('error')
+        });
+    }
+});
+
+
 
 
 slider.addEventListener('click',(e)=>{

@@ -123,8 +123,6 @@ ul .lst{
     margin: 0 auto;
 }
 
-
-
 .introData {
     text-align: center;
     margin-top: -5.5rem;
@@ -161,10 +159,30 @@ ul .lst{
     padding: 8px 10px;
     background-color: #7b7b7b4f;
     border-radius: 100px;
+    overflow: hidden;
+}
+.iconAnchor:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform: scale(0);
+    bottom: 0;
+    right: 6px;
+    z-index: -1;
+    transition: transform .2s ease-in;
+    border-radius: 100px;
+}
+
+.iconAnchor:hover:after{
+    transform: scale(2);
 }
 
 .iconAnchor{
     color:#670000db;
+    position: relative;
+    z-index: 1;
 }
 
 .fill{
@@ -523,8 +541,8 @@ footer{
 
 .button-to-top {
     position: fixed;
-    bottom: 10px;
-    right: 15px;
+    bottom: 30px;
+    right: 30px;
     height: 50px;
     width: 50px;
     font-size: 30px;
@@ -620,5 +638,8 @@ img{
     display: block;
 }
 .hide{
-    display: none;
+    display:none;
+}
+.error{
+    border: 2px solid #ff000063;
 }
