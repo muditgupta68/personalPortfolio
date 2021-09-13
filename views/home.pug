@@ -18,6 +18,7 @@ html
         link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css")
         style
             include ../static/style.css
+            include ../static/responsive.css
     body
         nav#start 
             div.container 
@@ -32,7 +33,7 @@ html
                         i.fal.fa-map-marker-alt
                         div.rightInfo
                             h5 D-Block Vikas-Puri New Delhi 110018 
-                    div.divisions
+                    div.divisions#phone
                         i.fal.fa-phone
                         div.rightInfo
                             h5 +91-965238322  
@@ -55,13 +56,13 @@ html
                         h4 EMAIL : #[span.entry muditgupta1086@gmail.com]
                     div.flex.containIcons
                         div.icons 
-                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
+                            a.iconAnchor(href="https://www.linkedin.com/in/mudit-gupta-303994192/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
+                        div.icons   
+                            a.iconAnchor(href="https://github.com/muditgupta68", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
                         div.icons 
-                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
+                            a.iconAnchor(href="https://www.instagram.com/_muditgupta/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
                         div.icons 
-                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
-                        div.icons 
-                            a.iconAnchor(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook] 
+                            a.iconAnchor(href="https://www.facebook.com/mudit.gupta.98892/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook] 
         //- section.fill
         section.about.flex(data-aos="fade-right")
             div.col1
@@ -82,8 +83,9 @@ html
                                     stop (offset="100%" stop-color="red")
                                 circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="6" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
                             div.skillData
-                                h1 95% 
-                                h3 HTML5 & CSS3
+                                div.skillData1(style="left: 21px;")
+                                    h1 95% 
+                                    h3 HTML5-CSS3
                         div.skill 
                             svg(version="1.1")
                                 linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
@@ -92,8 +94,9 @@ html
                                 circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="25" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
                                 
                             div.skillData
-                                h1 85% 
-                                h3 Javascript
+                                div.skillData1
+                                    h1 85% 
+                                    h3 Javascript
                         div.skill 
                             svg(version="1.1")
                                 linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
@@ -102,8 +105,9 @@ html
                                 circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="40" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
                                 
                             div.skillData
-                                h1 80% 
-                                h3 MangoDB
+                                div.skillData1
+                                    h1 80% 
+                                    h3 MangoDB
                         div.skill 
                             svg(version="1.1")
                                 linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
@@ -112,8 +116,9 @@ html
                                 circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="0" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
                                 
                             div.skillData
-                                h1 97% 
-                                h3 Python
+                                div.skillData1
+                                    h1 97% 
+                                    h3 Python Dev
                         div.skill 
                             svg(version="1.1")
                                 linearGradient#linear(x1="0%" y1="0%" x2="100%" y2="0%")
@@ -122,9 +127,9 @@ html
                                 circle.stroke1.stroke(stroke-linecap="round"  cx="25" cy="65" r="60" stroke="url(#linear)" stroke-width="4" fill="none" stroke-dasharray="320" stroke-dashoffset="15" stroke-mitterlimit="0" transform="rotate(-90 ) translate(-100 0)")
                                 
                             div.skillData
-                                h1 90% 
-            
-                                h3 Pug Template
+                                div.skillData1
+                                    h1 90% 
+                                    h3 Pug (SPA)
         section.more-about(data-aos="fade-up")
             div.education 
                 h2 education
@@ -149,12 +154,12 @@ html
             div.services(data-aos="fade-up")
                 h1 Projects  
                 div.container.slideshow-container
-                    +slide(1,6,'../static/projectImages/project1.png','project1','#')
-                    +slide(2,6,'../static/projectImages/project2.png','project2','#')
-                    +slide(3,6,'../static/projectImages/project3.png','project3','#')
-                    +slide(4,6,'../static/projectImages/project4.png','project4','#')
-                    +slide(5,6,'../static/projectImages/project5.png','project5','#')
-                    +slide(6,6,'../static/projectImages/project6.png','project6','#')
+                    +slide(1,6,'../static/projectImages/project1.png','Login-Page Design','https://login-page-design.glitch.me/home.html')
+                    +slide(2,6,'../static/projectImages/project2.png','Covid-Tracker using Python','#')
+                    +slide(3,6,'../static/projectImages/project3.png','Gossip Chat Application','https://gossip-chat-application.herokuapp.com/')
+                    +slide(4,6,'../static/projectImages/project4.png','Bill-Splitter','https://tip-calculator-app.glitch.me')
+                    +slide(5,6,'../static/projectImages/project5.png','Modern Card Design','https://moderncarddesign.glitch.me')
+                    +slide(6,6,'../static/projectImages/project6.png','LoopStudios Landpage Design','https://loop-studio-landingpage.glitch.me')
 
                     a.prev(onclick="slideChange(-1)") &#10094
                     a.next(onclick="slideChange(1)") &#10095
@@ -176,13 +181,13 @@ html
                 div.flex2.foot-bottom 
                     div.buttons.flex 
                         div.foot-icons#icon-container 
-                            a#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
+                            a#icon-link(href="https://github.com/muditgupta68", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
                         div.foot-icons#icon-container 
-                            a#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
+                            a#icon-link(href="https://www.instagram.com/_muditgupta/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
                         div.foot-icons#icon-container 
-                            a#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
+                            a#icon-link(href="https://www.linkedin.com/in/mudit-gupta-303994192/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
                         div.foot-icons#icon-container 
-                            a#icon-link(href="#", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook]
+                            a#icon-link(href="https://www.facebook.com/mudit.gupta.98892/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook]
                     div.copyright 
                         h4 Copyright ©2021 All rights reserved | made with ❤ by Mudit Gupta
         div.button-to-top 
