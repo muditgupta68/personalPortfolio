@@ -4,6 +4,7 @@
     --ternary: #FFFFFF;
 }
 
+
 @media screen and (max-width: 1070px) {
     .inputForm{
         width: 100%;
@@ -11,8 +12,20 @@
 }
 
 @media screen and (max-width: 990px) {
+    .sticky {
+        padding-bottom: 0;
+    }
+    .hamburger {
+        padding: 12px 20px;
+    }
     #footHead{
         font-size: 20px;
+    }
+    .hamburger{
+        opacity: 1;
+    }
+    .ul{
+        opacity: 0;
     }
     .resumeButton,.submitButton{
         padding: 1rem 1.5rem;

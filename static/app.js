@@ -2,9 +2,36 @@ let slider = document.querySelector('.button-link');
 let formInput = document.querySelectorAll('.inputForm');
 let formMsg = document.querySelector('.message');
 let submit = document.querySelector('.submitButton');
+let hamburgerMenu = document.querySelector('.styleBars');
+let ulMenu = document.querySelector('.ul');
+let ulData = document.querySelector('ul');
+let listData = document.querySelectorAll('.lst');
 
 let check1=check2= 0;
 let slideNumber = 0;
+
+styling = ((name,attr,val)=>{
+    name.style.attr = val;
+});
+
+hamburgerMenu.addEventListener('click',(e)=>{
+    if (ulMenu.classList.contains('visible')){
+        ulMenu.classList.remove("visible");
+        ulData.classList.remove('expand');
+        listData.forEach(list=>{
+            list.style.width='auto';
+            list.style.margin='0';
+        });
+    }
+    else{
+        ulMenu.classList.add("visible");
+        ulData.classList.add('expand');
+        listData.forEach(list=>{
+            list.style.width='9rem';
+            list.style.margin='10px auto';
+        });
+    }
+});
 
 formInput.forEach(input=>{
     input.addEventListener('input',(e)=>{

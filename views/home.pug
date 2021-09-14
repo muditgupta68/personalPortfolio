@@ -20,13 +20,16 @@ html
             include ../static/style.css
             include ../static/responsive.css
     body
-        nav#start 
-            div.container 
-                ul 
+        header 
+            div.hamburger.container
+                i.fad.fa-bars.styleBars  
+            div.container.ul
+                ul
                     li.lst #[a.navAnchor(href="/") Home ]
                     li.lst #[a.navAnchor(href="/") About ]
                     li.lst #[a.navAnchor(href="/") Portfolio ]
                     li.lst #[a.navAnchor(href="/") Contact ]
+        nav#start
             div.cover.container
                 div.bar
                     div.divisions 

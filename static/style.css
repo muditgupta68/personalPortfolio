@@ -23,8 +23,28 @@ html{
 body{
     margin-top: -24px;
     transition: all 0.6s ease;
-    background-color: var(--ternary);
+    background-color: var(--primary);
 }
+
+header{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    transition: all .5s ease;
+}
+
+.sticky{
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    background-color: var(--ternary);
+    box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+    -webkit-box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+    padding-bottom: 1rem;
+}
+
 nav{
     height: 620 px;
     background-color: #FFEFAE;
@@ -43,7 +63,7 @@ ul {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top: 1.5rem;
+    /* padding-top: 1.5rem; */
     margin: auto;
 }
 
@@ -640,11 +660,39 @@ img{
 }
 
 .visible{
-    display: block;
+    display: block !important;
+    opacity: 1 !important;
+    transition: all .5s ease-in;
 }
+
 .hide{
-    display:none;
+    display: none !important;
+    opacity: 0 !important;
 }
+
 .error{
     border: 2px solid #ff000063;
+}
+
+.expand{
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+    background-color: var(--ternary);
+}
+
+.hamburger {
+    /* padding: 12px 20px; */
+    padding: 0 30px;
+    text-align: end;
+    font-size: 25px;
+    color: var(--secondary);
+    opacity: 0;
+}
+.styleBars {
+    cursor: pointer;
+}
+
+.ul{
+    opacity: 1;
 }
