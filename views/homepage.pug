@@ -1,34 +1,9 @@
-//- mixins functions for pug template
-mixin slide(num,max,src,text,link)
-    .mySlides.fade
-        .numberText= num+"/"+max
-        a(href=link, target="_blank", rel="noopener noreferrer") #[img(src=src, alt="project image")]
-        .text= text
+extends default.pug
 
-mixin expertise(text)
-    .cardExpert
-        h3= text
+block title
+    title= title
 
-doctype html
-html
-    head 
-        title= title
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
-        link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css")
-        style
-            include ../static/style.css
-            include ../static/responsive.css
-    body
-        nav 
-            div.hamburger.container
-                i.fad.fa-bars.styleBars  
-            div.container.ul
-                ul
-                    li.lst #[a.navAnchor(href="/") Home ]
-                    li.lst #[a.navAnchor(href="/") About ]
-                    li.lst #[a.navAnchor(href="/") Portfolio ]
-                    li.lst #[a.navAnchor(href="/") Contact ]
+block content 
         section#start
             div.cover.container
                 div.bar
@@ -166,51 +141,3 @@ html
 
                     a.prev(onclick="slideChange(-1)") &#10094
                     a.next(onclick="slideChange(1)") &#10095
-
-        footer(data-aos="fade") 
-            div.footContainer
-                div.flex2#footHead
-                    h1 get in touch 
-                    a(href="../static/Resume1.pdf", target="_blank", rel="noopener noreferrer") #[button.resumeButton Download resume]
-                div.formContainer 
-                    h2 Contact me
-                form(action="#", method="post")  
-                    div.form.flex3
-                        input.inputForm(type="text", name="name", placeholder="Your Name", required)  
-                        input.inputForm(type="text", name="email", placeholder="Email", required)   
-                        input.inputForm(type="text", name="subject", placeholder="Subject", required)
-                    textarea.message(name="message", cols="64", rows="5", placeholder="Message")
-                    button.submitButton(type="submit") Send Message 
-                div.flex2.foot-bottom 
-                    div.buttons.flex 
-                        div.foot-icons#icon-container 
-                            a#icon-link(href="https://github.com/muditgupta68", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-github-alt] 
-                        div.foot-icons#icon-container 
-                            a#icon-link(href="https://www.instagram.com/_muditgupta/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-instagram] 
-                        div.foot-icons#icon-container 
-                            a#icon-link(href="https://www.linkedin.com/in/mudit-gupta-303994192/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-linkedin] 
-                        div.foot-icons#icon-container 
-                            a#icon-link(href="https://www.facebook.com/mudit.gupta.98892/", target="_blank", rel="noopener noreferrer")  #[i.fab.fa-facebook]
-                    div.copyright 
-                        h4 Copyright ©2021 All rights reserved | made with ❤ by Mudit Gupta
-        div.button-to-top 
-            div.button-link #[i.fad.fa-chevron-double-up] 
-        
-        script(src="https://unpkg.com/aos@next/dist/aos.js") 
-        script(src="../static/app.js") 
-        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
-        script(src="../static/scroll.js")
-        //- AOS sliders
-        script AOS.init({offset: 300,delay: 1,once: true , duration: 1000});
-            
-          
-            
-
-                        
-                    
-
- 
-        
-        
-
-        

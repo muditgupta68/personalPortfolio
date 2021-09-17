@@ -1,6 +1,6 @@
 $('.button-to-top').hide();
 let circle = document.querySelectorAll('circle');
-let header = document.querySelector('header');
+let header = document.querySelector('nav');
 
 circle.forEach(e => {
     e.classList.remove('stroke');

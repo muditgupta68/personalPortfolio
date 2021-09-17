@@ -7,6 +7,25 @@ let ulMenu = document.querySelector('.ul');
 let ulData = document.querySelector('ul');
 let listData = document.querySelectorAll('.lst');
 
+
+
+const mapInit=()=>{
+    let mymap = L.map('map').setView([28.640740086914814, 77.06775521327664], 10);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoibXVkaXRndXB0YTY4IiwiYSI6ImNrdG9ldzcxdzAyMzIyb2wzb3Z3YTliaWQifQ.OVwhmFtNr0zrb7f34shqlQ'
+    }).addTo(mymap);
+
+    var marker = L.marker([28.640740086914814, 77.06775521327664]).addTo(mymap);
+    marker.bindPopup("<b>Mudit gupta</b><br>Hi! I am here.").openPopup();
+}
+
+mapInit();
+
 let check1=check2= 0;
 let slideNumber = 0;
 

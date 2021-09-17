@@ -1,0 +1,27 @@
+extends default.pug
+
+block title
+    title= title 
+
+block content 
+        section.expertise 
+            div.services(data-aos="fade-up")
+                h1 my expertise   
+                div.aboutExpertise.flex1
+                    +expertise('SPA: Single page application')
+                    +expertise('Responsive Designing')
+                    +expertise('Front-End designing')
+
+ 
+            div.services(data-aos="fade-up")
+                h1 Projects  
+                div.container.slideshow-container
+                    +slide(1,6,'../static/projectImages/project1.png','Login-Page Design','https://login-page-design.glitch.me/home.html')
+                    +slide(2,6,'../static/projectImages/project2.png','Covid-Tracker using Python','#')
+                    +slide(3,6,'../static/projectImages/project3.png','Gossip Chat Application','https://gossip-chat-application.herokuapp.com/')
+                    +slide(4,6,'../static/projectImages/project4.png','Bill-Splitter','https://tip-calculator-app.glitch.me')
+                    +slide(5,6,'../static/projectImages/project5.png','Modern Card Design','https://moderncarddesign.glitch.me')
+                    +slide(6,6,'../static/projectImages/project6.png','LoopStudios Landpage Design','https://loop-studio-landingpage.glitch.me')
+
+                    a.prev(onclick="slideChange(-1)") &#10094
+                    a.next(onclick="slideChange(1)") &#10095

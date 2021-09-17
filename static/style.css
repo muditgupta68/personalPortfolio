@@ -26,7 +26,7 @@ body{
     background-color: var(--primary);
 }
 
-header{
+nav{
     position: relative;
     top: 0;
     right: 0;
@@ -37,7 +37,7 @@ header{
 
 .sticky{
     position: sticky;
-    z-index: 9;
+    z-index: 10000;
     top: 0;
     background-color: var(--ternary);
     box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
@@ -45,13 +45,20 @@ header{
     padding-bottom: 1rem;
 }
 
-nav{
-    height: 620 px;
+#start{
+    /* height: 620 px; */
     background-color: #FFEFAE;
 }
 
 .container {
     margin: 1.5rem;
+}
+
+#map{
+    margin: 100px 150px;
+    height: 100vh;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
 }
 
 .fill {
