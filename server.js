@@ -8,7 +8,7 @@ let urlencoded = bodyParser.urlencoded({ extended: false });
 
 // mongodb & monoose connectivity
 
-const URI = 'mongodb://localhost/portfolioQuery'
+const URI = process.env.MONGODB_URI||'mongodb://localhost/portfolioQuery'
 
 mongoose .connect(URI, {
         useNewUrlParser: true,
