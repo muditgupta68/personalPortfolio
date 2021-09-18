@@ -2,30 +2,13 @@ let slider = document.querySelector('.button-link');
 let formInput = document.querySelectorAll('.inputForm');
 let formMsg = document.querySelector('.message');
 let submit = document.querySelector('.submitButton');
+// let form = document.querySelector('#form');
+// let cross = document.querySelector('#btn');
+// let notification = document.querySelector('#noti');
 let hamburgerMenu = document.querySelector('.styleBars');
 let ulMenu = document.querySelector('.ul');
 let ulData = document.querySelector('ul');
 let listData = document.querySelectorAll('.lst');
-
-
-
-const mapInit=()=>{
-    let mymap = L.map('map').setView([28.640740086914814, 77.06775521327664], 10);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoibXVkaXRndXB0YTY4IiwiYSI6ImNrdG9ldzcxdzAyMzIyb2wzb3Z3YTliaWQifQ.OVwhmFtNr0zrb7f34shqlQ'
-    }).addTo(mymap);
-
-    var marker = L.marker([28.640740086914814, 77.06775521327664]).addTo(mymap);
-    marker.bindPopup("<b>Mudit gupta</b><br>Hi! I am here.").openPopup();
-}
-
-mapInit();
-
 let check1=check2= 0;
 let slideNumber = 0;
 
@@ -77,14 +60,21 @@ formMsg.addEventListener('input',(e)=>{
     }
 });
 
-submit.addEventListener('click',(e)=>{
+submit.addEventListener('click',()=>{
     if(check1==0||check2==0){
         formMsg.classList.add('error')
         formInput.forEach(input=>{
             input.classList.add('error')
         });
     }
+    if (form.checkValidity()) {
+    alert("Your response has been recorded successfully, Thankyou!😊");
+  }
 });
+
+// cross.addEventListener('click',()=>{
+//     notification.style.display="none";
+// });
 
 
 

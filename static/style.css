@@ -26,6 +26,36 @@ body{
     background-color: var(--primary);
 }
 
+#noti{
+    display:none;
+    background-color: #ffff3966;
+    border-radius:10px;
+    z-index:1000000000;
+    padding:24px 10px;
+    margin: 10px;
+}
+
+#noti h3{
+    margin: auto;
+    font-family: Lato;
+    color: var(--secondary);
+    display: table;
+}
+#btn{
+    border:none;
+    background-color:transparent;
+    outline:none;
+    padding: 5px 8px;
+    cursor:pointer;
+    font-size:20px;
+    color: var(--secondary);
+    float: right;
+    margin-top: -26px;
+}
+#noti span{
+    color: green;
+}
+
 nav{
     position: relative;
     top: 0;

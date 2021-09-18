@@ -22,6 +22,10 @@ html
         include ../static/style.css
         include ../static/responsive.css
   body
+    //- notification
+    div#noti
+        h3 Your response has been recorded successfully, #[span Thankyou!]😊
+        button#btn #[i.fad.fa-times]
     //- navbar
     include nav.pug
 
@@ -36,9 +40,6 @@ html
         div.button-link #[i.fad.fa-chevron-double-up] 
     
     //-js files 
-    script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin="")
     script(src="https://unpkg.com/aos@next/dist/aos.js") 
     script(src="../static/app.js") 
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
