@@ -17,6 +17,8 @@
     }
     .hamburger {
         padding: 12px 20px;
+        position: sticky;
+        background-color: transparent;
     }
     #footHead{
         font-size: 20px;
